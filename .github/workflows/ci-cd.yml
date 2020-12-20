@@ -21,7 +21,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn clean install
 
   deploy:
     name: CD Pipeline
@@ -61,7 +61,7 @@ jobs:
          --description "This is a revision for the ${{ matrix.appname }}-${{ github.sha }}" \
          --ignore-hidden-files \
          --s3-location s3://${{ matrix.s3-bucket }}/${{ matrix.s3-filename }}.zip \
-         --source .
+         --source ./target/*.jar
 
 
       # Create deployment to CodeDeploy
