@@ -1,0 +1,17 @@
+version: 0.1
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/apps/sigo
+permissions:
+  - object: /home/ubuntu
+    owner: ubuntu
+    group: ubuntu
+    type:
+      - directory
+      - file
+hooks:
+  ApplicationStart:
+    - location: scripts/start.sh
+      timeout: 300
+      runas: ubuntu

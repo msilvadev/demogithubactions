@@ -1,4 +1,4 @@
-version: 0.2
+version: 0.1
 
 env:
   variables:
@@ -17,8 +17,9 @@ phases:
 artifacts:
   files:
     - target/*.jar
-    - scripts/*.sh
+    - src/main/resources/scripts/*.sh
     - appspec.yml
+    - src/main/resources/application.yml
   discard-paths: yes
 
 cache:
