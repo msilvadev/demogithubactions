@@ -11,6 +11,7 @@ on:
 
 jobs:
   buildAndTest:
+    -name: CI Pipeline
 
     runs-on: ubuntu-latest
 
