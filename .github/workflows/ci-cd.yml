@@ -29,7 +29,7 @@ jobs:
     strategy:
       matrix:
         java-version: ['8.x']
-        appname: ['demogithubactions']
+        appname: ['app-name']
         deploy-group: ['prod']
         s3-bucket: ['sigo-codedeploy-deployments']
         s3-filename: ['prod-aws-codedeploy-${{ github.sha }}']
