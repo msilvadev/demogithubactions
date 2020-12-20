@@ -1,0 +1,1 @@
+java -jar -Dspring.profiles.active=dev /home/ubuntu/apps/sigo/demogithubactions/demogithubactions-1.0.0.jar > /dev/null 2> /dev/null < /dev/null &

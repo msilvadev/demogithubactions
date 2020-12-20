@@ -2,7 +2,7 @@ version: 0.1
 os: linux
 files:
   - source: /
-    destination: /home/ubuntu/apps/sigo
+    destination: /home/ubuntu/apps/sigo/demogithubactions
 permissions:
   - object: /home/ubuntu
     owner: ubuntu
@@ -11,6 +11,10 @@ permissions:
       - directory
       - file
 hooks:
+#  AfterInstall:
+#    - location: scripts/change_permissions.sh
+#      timeout: 300
+#      runas: root
   ApplicationStart:
     - location: scripts/start.sh
       timeout: 300
