@@ -80,5 +80,5 @@ jobs:
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
           service: gpi-manager
-          cluster: cluster
+          cluster: sigo-cluster
           wait-for-service-stability: true
